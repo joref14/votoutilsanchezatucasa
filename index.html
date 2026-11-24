@@ -129,7 +129,7 @@ details{min-width:0}
 <body>
 <div class="wrap" id="app">
   <header class="top">
-    <div><h1>Voto útil para echar a Sánchez (a su puta casa) <span class="hd">@jorgeelias14</span></h1><small>Voto útil 29N · estimación independiente</small><small style="font-weight:600">Actualización en línea con las encuestas</small></div>
+    <div><h1>Voto útil para echar a Sánchez (a su puta casa)</h1><small>Voto útil 29N · estimación independiente</small><small style="font-weight:600">Actualización en línea con las encuestas</small></div>
     <div class="count"><span id="cd-l">días para votar</span><b id="cd">–</b></div>
   </header>
 
@@ -439,7 +439,7 @@ const colp = k => colpv(S.prov,k);
 const Lp = k => lpv(S.prov,k);   // en Navarra el PP va junto a UPN
 const BLOCNAME = {right:'la derecha', left:'la izquierda'};
 const ELECTION = Date.UTC(2026,10,29,0,0), BAN = Date.UTC(2026,10,23,23,0);
-const banned = false;
+const banned = Date.now() >= BAN;
 let S = {prov:'A Coruña', party:'none', bloc:'right', src:'nosw', scen:'base', view:'party'};
 try { const x = JSON.parse(localStorage.getItem('v29n2')||'{}'); Object.assign(S, x); } catch(e){}
 S.bloc = 'right';
